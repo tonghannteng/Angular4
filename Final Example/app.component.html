@@ -1,0 +1,9 @@
+<h1>
+  {{title}}
+</h1>
+
+<input type="text" [(ngModel)]="pipeargs">
+
+<div *ngFor="let post of posts | mypipe:pipeargs">
+  <app-my-post [data]="post"></app-my-post>
+</div>
